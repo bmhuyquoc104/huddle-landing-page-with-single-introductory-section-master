@@ -1,0 +1,163 @@
+:root{
+    --clr_primary:hsl(257, 40%, 49%);
+    --clr_primary2:hsl(300, 69%, 71%);
+    --fw_body:400;
+    --fw_heading_s:400;
+    --fw_heading_m:600;
+    --fs_heading:"Poppins";
+    --fs_body:"Open Sans"
+}
+
+*,*::after,*::before{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header{
+  align-self: center;
+  width: max(85%,100px);
+}
+
+header svg{
+  width: max(40%,100px);
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  background-image: url(./images/bg-mobile.svg);
+  background-color: var(--clr_primary);
+  background-repeat: no-repeat;
+  min-height:100vh;
+  gap: 2em;
+  padding: 2em;
+}
+
+main{
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
+  align-items:center;
+}
+
+.container{
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
+  align-items: center;
+  width: max(80%,300px);
+  gap: 2em;
+}
+
+.container .image{
+  width:100%;
+}
+
+.container .image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  text-align: center;
+}
+
+.container section h1{
+  color: white;
+  font-family: var(--fs_heading);
+  font-weight:var(--fw_heading_s);
+  font-size:clamp(1.5rem,3vw,5rem);
+}
+
+.container section p{
+  color: white;
+  font-family: var(--fs_body);
+  font-weight:var(--fw_body);
+  font-size:clamp(1rem,1.15vw,1.5rem);
+}
+
+.container section a{
+  text-decoration: none;
+  background-color: white;
+  padding: 1em 5em;
+  color: var(--clr_primary);
+  font-family: var(--fs_body);
+  font-weight:var(--fw_body);
+  border-radius: 25px;
+  font-size:clamp(0.8rem,1.15vw,1.5rem);
+  box-shadow: 0 5px 15px 0 grey;
+}
+
+.container section a:hover{
+  background-color:var(--clr_primary2);
+  color:white;
+  cursor: pointer;
+}
+
+.container section .logo{
+  margin-top: 1em;
+  display: flex;
+  gap: 0.75rem;
+}
+
+@media (min-width: 768px){
+
+  body{
+    background-image: url(./images/bg-desktop.svg);
+  }
+
+  .container{
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    width: max(100%,300px);
+    flex-wrap: wrap;
+  }
+
+  .container .image{
+    width: 60%;
+  }
+
+  .container .image img{
+    object-fit: cover;
+  }
+
+  .container .join__community{
+    width:35%;
+    padding: 2em 0;
+  }
+
+  .container section {
+    text-align:left;
+    align-items:flex-start;
+    justify-content:flex-start;
+  }
+  
+  .container .contact__information{
+    margin-left: auto;
+    margin-right: 2em;
+    margin-top: -2em;
+  }
+
+  header{
+    align-self: flex-start;
+    width: max(40%,100px);
+  }
+}
+
+.attribution {
+    color: var(--clr_primary2);
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: white;
+    
+  }
